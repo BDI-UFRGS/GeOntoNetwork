@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.inf.ufrgs.br/bdi/ontologies/geontonet/geontonet-full.owl#"
+     xml:base="https://www.inf.ufrgs.br/bdi/ontologies/geontonet/geontonet-full.owl"
+     xmlns:dce="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/geontonet/geontonet-full.owl">
+        <owl:versionIRI rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/geontonet/releases/2024-04-07/geontonet-full.owl"/>
+        <dcterms:description>None</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc/4.0/"/>
+        <dcterms:title>GeOnto Network</dcterms:title>
+        <owl:versionInfo>2024-04-07</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:label>license</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:label>title</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEONTONET_0000000 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEONTONET_0000000">
+        <rdfs:label xml:lang="en">root node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">contact position</rdfs:label>
+        <skos:altLabel xml:lang="pt">posição do contato</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="pt">Luan: Talvez tipo de Geometria seja uma classe de segunda ordem, mas em primeiro momento não utilizaremos punning para representar isto. A classe geometry tem uma relação de &apos;has geometry type&apos; com um &apos;geometry type&apos; e as instâncias dessa classe é que definem o tipo de geometria de fato. Caso seja necessário criar alguma subclasse de um &apos;body of rock&apos; que tenha um &apos;geometry type&apos; específico é possível utilizar a primitiva do owl value para isto.
+
+Não sabemos ainda como classificar esta classe. Do que ela seria subclasse?</rdfs:comment>
+        <rdfs:label xml:lang="en">geometry type</rdfs:label>
+        <skos:altLabel xml:lang="pt">tipo de geometria</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058"/>
+                    <rdf:Description rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">contact type</rdfs:label>
+        <skos:altLabel xml:lang="pt">tipo de contato</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043"/>
+        <rdfs:label xml:lang="en">amalgamated contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato amalgamado</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041"/>
+        <rdfs:label xml:lang="en">base position contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato de base</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043"/>
+        <rdfs:label xml:lang="en">cryptic/covered contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato críptico/encoberto</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043"/>
+        <rdfs:label xml:lang="en">conformable contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato concordante</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043"/>
+        <rdfs:label xml:lang="en">erosive contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato erosivo</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043"/>
+        <rdfs:label xml:lang="en">faulted contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato de falha</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043"/>
+        <rdfs:label xml:lang="en">gradational contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato gradacional</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043"/>
+        <rdfs:label xml:lang="en">intrusive contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato intrusivo</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043"/>
+        <rdfs:label xml:lang="en">sharp contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato abrupto</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042"/>
+        <rdfs:label xml:lang="en">irregular geometry</rdfs:label>
+        <skos:altLabel xml:lang="pt">geometria irregular</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042"/>
+        <rdfs:label xml:lang="en">lenticular convex top flatbed geometry</rdfs:label>
+        <skos:altLabel xml:lang="pt">geometria lenticular topo convexo base plana</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042"/>
+        <rdfs:label xml:lang="en">lenticular concave convex geometry</rdfs:label>
+        <skos:altLabel xml:lang="pt">geometria lenticular côncavo convexa</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041"/>
+        <rdfs:label xml:lang="en">lateral position contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato lateral</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042"/>
+        <rdfs:label xml:lang="en">lenticular flattop concave base geometry</rdfs:label>
+        <skos:altLabel xml:lang="pt">geometria lenticular topo plano base convexa</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042"/>
+        <rdfs:label xml:lang="en">sheet geometry</rdfs:label>
+        <skos:altLabel xml:lang="pt">geometria lençoidal</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042"/>
+        <rdfs:label xml:lang="en">sigmoidal geometry</rdfs:label>
+        <skos:altLabel xml:lang="pt">geometria sigmoidal</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042"/>
+        <rdfs:label xml:lang="en">tabular geometry</rdfs:label>
+        <skos:altLabel xml:lang="pt">geometria tabular</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041"/>
+        <rdfs:label xml:lang="en">top position contact</rdfs:label>
+        <skos:altLabel xml:lang="pt">contato de topo</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069 -->
+
+    <owl:NamedIndividual rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069">
+        <rdf:type rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042"/>
+        <rdfs:label xml:lang="en">wedge shape geometry</rdfs:label>
+        <skos:altLabel xml:lang="pt">geometria de cunha</skos:altLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
+

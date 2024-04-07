@@ -1,0 +1,12 @@
+format-version: 1.2
+data-version: https://www.inf.ufrgs.br/bdi/ontologies/geontonet/releases/2024-04-07/geontonet-simple.owl
+ontology: https://www.inf.ufrgs.br/bdi/ontologies/geontonet/geontonet-simple.owl
+property_value: http://purl.org/dc/terms/description "None" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by-nc/4.0/
+property_value: http://purl.org/dc/terms/title "GeOnto Network" xsd:string
+property_value: owl:versionInfo "2024-04-07" xsd:string
+
+[Term]
+id: GEONTONET:0000000
+name: root node
+
