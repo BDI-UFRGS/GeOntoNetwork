@@ -2,7 +2,8 @@
 ![Build Status](https://github.com/BDI-UFRGS/geontonetwork/actions/workflows/qc.yml/badge.svg)
 # GeOnto Network
 
-Description: None
+GeOnto Network is a ontology network for the geological domain.
+It is a BFO-based ontology having GeoCore Ontology as it central core and many domain ontologies covering geological domains.
 
 More information can be found at http://obofoundry.org/ontology/geontonet
 
@@ -14,7 +15,6 @@ The latest version of the ontology can always be found at:
 
 https://www.inf.ufrgs.br/bdi/ontologies/geontonet.owl
 
-(note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 
