@@ -1,0 +1,22 @@
+id: geontonet
+title: GeOnto Network
+github_org: BDI-UFRGS
+git_main_branch: main
+repo: geontonetwork
+uribase: https://www.inf.ufrgs.br/bdi/ontologies
+license: https://creativecommons.org/licenses/by-nc/4.0/
+release_artefacts:
+  - base
+  - full
+  - simple
+primary_release: full
+ci:
+  - github_actions
+import_group:
+  products:
+    - id: geocore
+      mirror_from: https://www.inf.ufrgs.br/bdi/ontologies/geocore/releases/2024-04-06/geocore.owl
+    - id: geores
+      mirror_from: https://www.inf.ufrgs.br/bdi/ontologies/geores/releases/2024-04-07/geores.owl
+    - id: geospr
+      mirror_from: https://www.inf.ufrgs.br/bdi/ontologies/geospr/releases/2024-04-06/geospr.owl

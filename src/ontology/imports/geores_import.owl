@@ -1,0 +1,189 @@
+Prefix(:=<https://www.inf.ufrgs.br/bdi/ontologies/geontonet/imports/geores_import.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://www.inf.ufrgs.br/bdi/ontologies/geontonet/imports/geores_import.owl>
+<https://www.inf.ufrgs.br/bdi/ontologies/geontonet/releases/2024-04-07/imports/geores_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://www.inf.ufrgs.br/bdi/ontologies/geores/releases/2024-04-07/geores.owl>)
+Annotation(owl:versionInfo "2024-04-07")
+
+Declaration(Class(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041>))
+Declaration(Class(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042>))
+Declaration(Class(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068>))
+Declaration(NamedIndividual(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#altLabel>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041> (contact position)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041> "contact position"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041> "posição do contato"@pt)
+EquivalentClasses(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041> ObjectOneOf(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068>))
+
+# Class: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> (geometry type)
+
+AnnotationAssertion(rdfs:comment <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> "Luan: Talvez tipo de Geometria seja uma classe de segunda ordem, mas em primeiro momento não utilizaremos punning para representar isto. A classe geometry tem uma relação de 'has geometry type' com um 'geometry type' e as instâncias dessa classe é que definem o tipo de geometria de fato. Caso seja necessário criar alguma subclasse de um 'body of rock' que tenha um 'geometry type' específico é possível utilizar a primitiva do owl value para isto.
+
+Não sabemos ainda como classificar esta classe. Do que ela seria subclasse?"@pt)
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> "geometry type"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> "tipo de geometria"@pt)
+EquivalentClasses(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> ObjectOneOf(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069>))
+
+# Class: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> (contact type)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> "contact type"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> "tipo de contato"@pt)
+EquivalentClasses(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> ObjectOneOf(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059>))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051> (amalgamated contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051> "amalgamated contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051> "contato amalgamado"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000051>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052> (base position contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052> "base position contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052> "contato de base"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000052>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053> (cryptic/covered contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053> "cryptic/covered contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053> "contato críptico/encoberto"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000053>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054> (conformable contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054> "conformable contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054> "contato concordante"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000054>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055> (erosive contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055> "erosive contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055> "contato erosivo"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000055>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056> (faulted contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056> "faulted contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056> "contato de falha"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000056>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057> (gradational contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057> "gradational contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057> "contato gradacional"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000057>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058> (intrusive contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058> "intrusive contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058> "contato intrusivo"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000058>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059> (sharp contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059> "sharp contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059> "contato abrupto"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000043> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000059>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060> (irregular geometry)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060> "irregular geometry"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060> "geometria irregular"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000060>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061> (lenticular convex top flatbed geometry)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061> "lenticular convex top flatbed geometry"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061> "geometria lenticular topo convexo base plana"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000061>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062> (lenticular concave convex geometry)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062> "lenticular concave convex geometry"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062> "geometria lenticular côncavo convexa"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000062>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063> (lateral position contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063> "lateral position contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063> "contato lateral"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000063>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064> (lenticular flattop concave base geometry)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064> "lenticular flattop concave base geometry"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064> "geometria lenticular topo plano base convexa"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000064>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065> (sheet geometry)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065> "sheet geometry"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065> "geometria lençoidal"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000065>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066> (sigmoidal geometry)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066> "sigmoidal geometry"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066> "geometria sigmoidal"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000066>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067> (tabular geometry)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067> "tabular geometry"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067> "geometria tabular"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000067>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068> (top position contact)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068> "top position contact"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068> "contato de topo"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000041> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000068>)
+
+# Individual: <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069> (wedge shape geometry)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069> "wedge shape geometry"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069> "geometria de cunha"@pt)
+ClassAssertion(<https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000042> <https://www.inf.ufrgs.br/bdi/ontologies/GEORES_0000069>)
+
+
+)
