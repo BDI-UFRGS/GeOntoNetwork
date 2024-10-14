@@ -8,11 +8,11 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/geontonet/geontonet-simple.owl">
-        <owl:versionIRI rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/geontonet/releases/2024-04-07/geontonet-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/geontonet/releases/2024-06-06/geontonet-simple.owl"/>
         <terms:description>None</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-nc/4.0/"/>
         <terms:title>GeOnto Network</terms:title>
-        <owl:versionInfo>2024-04-07</owl:versionInfo>
+        <owl:versionInfo>2024-06-06</owl:versionInfo>
     </owl:Ontology>
     
 

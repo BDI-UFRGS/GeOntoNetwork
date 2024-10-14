@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                b0d50ef76bda46294c3358b23f0f415a46a63030b8d758d4e5fb2b159630d8d4
+CONFIG_HASH=                8340474898128de9e26fba373817d2378992b2194ec870b8fe964a72f47b98e1
 
 
 # ----------------------------------------
@@ -159,7 +159,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  geocore geores geospr
+IMPORTS =  geocore geores geospr bfo2020
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -371,6 +371,38 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: geocore
+
+$(IMPORTDIR)/geocore_import.owl: $(MIRRORDIR)/geocore.owl $(IMPORTDIR)/geocore_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/geocore_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: geores
+
+$(IMPORTDIR)/geores_import.owl: $(MIRRORDIR)/geores.owl $(IMPORTDIR)/geores_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/geores_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: geospr
+
+$(IMPORTDIR)/geospr_import.owl: $(MIRRORDIR)/geospr.owl $(IMPORTDIR)/geospr_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/geospr_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: bfo2020
+
+$(IMPORTDIR)/bfo2020_import.owl: $(MIRRORDIR)/bfo2020.owl $(IMPORTDIR)/bfo2020_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/bfo2020_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -422,6 +454,13 @@ mirror-geores: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/geospr.owl
 mirror-geospr: | $(TMPDIR)
 	$(ROBOT) convert -I https://www.inf.ufrgs.br/bdi/ontologies/geospr/releases/2024-04-06/geospr.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: bfo2020
+.PHONY: mirror-bfo2020
+.PRECIOUS: $(MIRRORDIR)/bfo2020.owl
+mirror-bfo2020: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.obolibrary.org/obo/bfo/2020/bfo-core.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
